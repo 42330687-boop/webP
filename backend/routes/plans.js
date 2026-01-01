@@ -1,19 +1,16 @@
 const express = require("express");
-const db = require("../db");
+const pool = require("../db");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  const sql = `
-    SELECT p.id AS plan_id, p.title, pp.duration, pp.price
-    FROM plans p
-    JOIN plan_prices pp ON p.id = pp.plan_id
-  `;
-
-  db.query(sql, (err, rows) => {
-    if (err) return res.status(500).json(err);
-    res.json(rows);
-  });
+router.get("/", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM plans");
+    res.json(result.rows);
+  } catch (err) {
+    console.error("❌ plans error:", err);
+    res.status(500).json({ message: "DB error" });
+  }
 });
 
 module.exports = router;
