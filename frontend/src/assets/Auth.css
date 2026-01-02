@@ -1,0 +1,115 @@
+/* =================== AUTH WRAPPER =================== */
+
+.auth-wrapper {
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  border: 3px solid rgba(0, 147, 255, 0.6);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #009acd;
+  text-align: center;
+  color: white;
+}
+
+/* =================== TITLE =================== */
+
+.auth-title {
+  font-size: 55px;
+  color: white;
+  text-shadow: 0px 0px 35px #009acd;
+  margin-bottom: 20px;
+}
+
+.auth-title span {
+  color: rgb(56, 152, 255);
+}
+
+/* =================== FORM =================== */
+
+.auth-form {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form label {
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.auth-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #009acd;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.auth-form input:focus {
+  box-shadow: 0px 0px 15px #009acd;
+}
+
+/* =================== BUTTON =================== */
+
+.auth-button {
+  padding: 12px;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #009acd;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #009acd;
+  color: white;
+  box-shadow: 0px 0px 15px #009acd;
+}
+
+/* =================== LINK SWITCH =================== */
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.switch-text a {
+  color: #62c3ff;
+  text-decoration: underline;
+}
+.payment-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: #0048cd;
+  color: white;
+  font-size: 16px;
+  margin-top: 8px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.payment-select :hover {
+  box-shadow: 0px 0px 15px #009acd;
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+  .auth-title {
+    font-size: 40px;
+  }
+  .auth-form {
+    width: 90%;
+  }
+}

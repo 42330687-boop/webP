@@ -1,0 +1,1473 @@
+/* تنسيق الهيدر */
+.main-header {
+  display: flex;
+  justify-content: center; /* لتوسيط الشعار أفقيًا */
+  align-items: center; /* لتوسيط العناصر عموديًا */
+  height: 150px; /* يمكنك تعديل الارتفاع حسب ما يناسبك */
+  background-color: #333; /* خلفية الهيدر */
+  padding: 0 20px; /* يمكن إضافة هوامش إضافية */
+  position: relative;
+}
+
+/* تنسيق الشعار */
+.logo img {
+  width: 200px;  /* عرض الشعار */
+  height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
+  object-fit: contain;
+}
+
+/* تنسيق أيقونة المينيو */
+.menu-container {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* وضع الأيقونة في الزاوية اليمنى */
+  transform: translateY(-50%); /* توسيط الأيقونة عموديًا */
+}
+
+.menu-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: white;
+}
+
+/* قائمة المينيو */
+.dropdown {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #444;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown li a:hover {
+  background-color: #555;
+}
+
+
+.footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.page-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* تنسيق الفوتر */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* تنسيق الأيقونات الاجتماعية */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00cc99;  /* يمكن تغيير اللون حسب رغبتك */
+}
+
+/* --- Gallery --- */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* كل صف يحتوي صورتين */
+  gap: 30px; /* مسافة أكبر بين الصور */
+  justify-items: center;
+  padding: 20px;
+}
+
+.menu-info {
+  width: 100%;
+  max-width: 450px; /* تكبير الصندوق */
+  text-align: center;
+}
+
+.menu-info img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* صورة مربعة */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.menu-info img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Pages (Gym, Jacuzzi, etc.) --- */
+.page-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.page-image {
+  width: 90%;          /* تكبير الصورة */
+  max-width: 500px;    /* الحد الأقصى أكبر */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.page-text {
+  width: 80%;
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  #gallery {
+    grid-template-columns: 1fr; /* صورة واحدة لكل صف */
+  }
+
+  .menu-info {
+    max-width: 250px; /* متناسب مع الموبايل */
+  }
+
+  .page-image {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+/* تنسيق عام لجميع النصوص */
+body {
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+  line-height: 1.6; /* لزيادة المسافة بين الأسطر */
+}
+h1, h2, h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 35px #009acd;
+}
+
+h1 {
+  font-size: 3rem; /* حجم أكبر للعناوين الرئيسية */
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* لتنسيق النصوص العادية في الصفحات */
+.texts, p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
+
+.texts {
+  color: #dddddd;
+}
+
+pre {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  color: #ccc; /* لون النص داخل الـ pre */
+}
+
+/* تنسيق الروابط */
+a {
+  color: #00bfff; /* لون أزرق فاتح */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #009acd;
+}
+
+/* تنسيق الأزرار */
+.button, .menu-button, .footer button {
+  background-color: #00bfff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.button:hover, .menu-button:hover {
+  color: aliceblue;
+  background-color: #009acd;
+  font-size: large;
+  text-shadow: 10px 5px 20px black;
+}
+
+.button:focus {
+  outline: none; /* إزالة الخطوط حول الأزرار عند الضغط */
+}
+
+.menu-button:focus, .button:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيق النص داخل الـ footer */
+.footer p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: #dddddd;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* تنسيق النصوص داخل الـ login-box */
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* تنسيق النصوص داخل الـ Train */
+.Train h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #009acd;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Train h2 {
+  text-align: left;
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: underline;
+}
+
+.Train p, .Train li {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+}
+
+/* ============================ المسؤولية ===================================== */
+
+/* التنسيق عند العرض على شاشات صغيرة */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .texts {
+    font-size: 16px;
+  }
+  pre {
+    font-size: 12px;
+  }
+}
+
+/* =======================
+      FOOD SECTION FIXED
+   ======================= */
+
+.food-section {
+  margin: 40px 0;
+}
+
+.food-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00bfff;
+  text-shadow: 0px 0px 20px #ffffff;
+  font-size: 30px;
+}
+
+.food-section .food-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.food-section .food-container .food {
+  width: 23%;
+  background-color: rgba(255,255,255,0.05);
+  border: 2px solid white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.food-section .food-container .food img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-section .food-container .food p {
+  margin-top: 10px;
+  text-align: center;
+  color: #00bfff;
+  font-size: 18px;
+  text-shadow: 0px 0px 8px #00bfff;
+}
+
+.food:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 15px #00bfff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .food-section .food-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .food-section .food-container .food {
+    width: 90%;
+  }
+}
+*{
+   margin:0;
+   padding: 0;
+}
+
+
+a {
+   text-decoration: none;
+   color: black;
+}
+/*=================  header   ===================*/
+
+.main-header {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: relative;
+
+}
+
+.logo img{
+
+  width: 150px;
+  height: 150px;
+}
+
+
+.menu-icon {
+   cursor: pointer;
+  font-size: 28px;
+  transition: transform 0.3s ease;
+ 
+}
+
+
+.menu-icon:hover {
+  transform: scale(1.2); /* يكبر الأيقونة شوي لما تمرر الماوس */
+  color: #007BFF; /* ممكن تغير اللون عند hover */
+}
+
+.menu-icon:active {
+  transform: scale(0.9); /* ينضغط الزر شوي لما تكبس عليه */
+}
+
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 160px;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #444;
+}
+
+
+.logo {
+   font-size: 20px;
+   font-weight: bold;
+   width: auto;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 24px;
+   font-weight: bold;
+   color: white;
+    }
+    .button {
+   background-color: #00bfff;
+   border: none;
+   padding: 12px 24px;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition:  0.3s ease;
+  
+}
+
+.menu-button {
+ 
+    background-color: #3498db;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+.menu-list {
+   display: none; /* مخفية بالبداية */
+   background-color: #222;
+   padding: 10px;
+   display: flex;
+   gap: 20px;
+   list-style: none;
+    }
+
+.menu-list a {
+  
+   display: block;
+   color: white;
+   text-decoration: none;
+   padding: 8px 0px;
+   border-bottom: 1px solid #444;
+       
+     
+    }
+
+.menu-list a:hover {
+   color: #00bfff;
+    }
+
+.button:hover {
+   outline:5px #ffffff solid ;
+   color: aliceblue;
+   background-color: #009acd;
+   font-size: large;
+   text-shadow:10px 5px 20px black;
+}
+/* لضبط ترتيب الظهور للـ menu */
+.menu-container {
+  position: relative;
+  z-index: 1000; /* تجعل القائمة فوق كل العناصر الأخرى */
+}
+
+/* القائمة نفسها */
+#dropdownMenu {
+  z-index: 1001;
+}
+
+/* السلايدر */
+.carousel {
+  position: relative;
+  z-index: 1; /* منخفض ليمر تحته أي عنصر أعلى */
+}
+
+/*=================  body  ===================*/
+body {
+   margin: 20px;
+   font-family: Arial, sans-serif;
+   background: #111;
+   color: white;
+}
+
+/*=================  home   ===================*/
+
+
+h1, h2, h3 {
+   color: #ffffff;
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   text-shadow:0px 0px 35px #009acd;
+}
+
+#Tytle{
+   font-size: 90px;
+   text-align: center;
+
+}
+
+#Tytle:hover{
+   color:#024b64;
+   text-shadow: 0px 0px 35px #ffffff;
+}
+
+#buttontopage2 {
+
+  padding: 18px 36px;
+  background-color: #00bfff;
+   font-size: 20px;
+   font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-self: center;
+  align-content: center;
+
+
+}
+
+ #buttontopage2:hover{
+  background-color: #035570;
+  a{
+  color: white;
+  }
+     
+}
+
+/*======================   menu.html   =========================*/
+    #menuItems {
+      display: none;
+      margin-top: 10px;
+    }
+   
+    
+    .menu-link {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #ffffff;
+      border: 200px;
+    }
+    .menu-link:hover {
+      text-decoration: underline;
+      color: #009acd;
+    }
+
+    #h1center{
+      text-align: center;
+    }
+
+    #gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 10px;
+  margin: 20px 0;
+    }
+    #gallery nav #photo{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+
+    }
+    #Menu-info #photo  #gallery {
+      width: 300px;
+      height: 250px;
+      /* object-fit: cover; */
+
+    }
+    /* الحركة الأساسية */
+ #gallery, #Menu-info {
+  transition: transform 0.3s ease; /* مدة وسلاسة الحركة */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* الحركة عند المرور بالماوس */
+#Menu-info:hover {
+  transform: translateY(-10px); /* يطلع الصندوق فوق 10 بيكسل */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* يضيف ظل جميل */
+}
+
+
+   #Menu-info{
+text-align: center;
+ border: 3px solid white; /* كل صورة لها إطار */
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: space-between;
+  margin: 10px;
+    }
+
+#gallery #photo :hover{
+
+   border: #009acd;
+   box-shadow:0px 0px 10px #009acd;
+}
+
+  #Menu-info  img{
+   width: 100%;
+box-sizing: border-box;
+width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+.texts{
+ font-size: 18px;
+  margin: 10px 0;
+  font-family: 'Times New Roman', Times, serif;
+  }
+
+  pre{
+  text-align: center;
+  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+  /*======================  </ menu.html >  =========================*/
+  /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+  /*======================   question.html  =========================*/
+.contact-info h2{
+  color:#009acd;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.contact-info h1{
+  text-align: center;
+  text-shadow: 0px 0px 10px #00bfff;
+  font-size: 90px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.contact-form h3 {
+  color: #009acd;
+  margin-bottom: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+/*======================  </ question.html > =========================*/
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*==================== Food starts ==============================*/
+.texts {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.recipies-texts {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.recipies-boxes {
+  display: flex;
+  justify-content: center;
+text-align: center;
+  
+}
+.recepies-box h2{
+  color: #009acd;
+  text-shadow: #ffffff;
+  text-align: center;
+}
+
+.home-box h2{
+  color: #009acd;
+  text-shadow: #ffffff;
+  text-align: center;
+}
+ 
+
+
+  .recipies-boxes .recepies-box {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.404);
+  padding: 10px;
+  border-radius: 20px;
+  height: 500px;
+
+}
+ .recipies-boxes .home-box {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(67, 158, 255, 0.7);
+  padding: 10px;
+  border-radius: 20px;
+  
+
+}
+
+.recipies-boxes .recepies-box:hover {
+  outline: rgb(255, 255, 255) 2px solid;
+background-color: rgba(255,255,255, 0.1);
+}
+.recipies-boxes .home-box:hover {
+  outline: rgba(0, 153, 255, 0.7) 2px solid;
+background-color: rgba(0, 153, 255, 0.2);
+}
+
+.recipies-boxes .recepies-box img {
+  width: 100%;
+   border-radius: 20px;
+}
+.recipies-boxes .home-box img {
+  width: 100%;
+   border-radius: 20px;
+}
+.food-section  h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.food-section .food-container {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.food-section .food-container .food {
+  width:100%;
+  border: rgb(255, 255, 255) 3px solid;
+  padding : 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.food-section .food-container .food img {
+ width: 100%;
+height: 57%;
+ 
+ 
+}
+.food{
+  p{
+    font-size: 20px;
+    text-align: center;
+    /* margin: 10px ; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 10px #009acd;
+  }
+}
+.recepies-box img{
+      width: 100%;
+      height: 65%;
+      object-fit: cover;
+}
+.home-box img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+/* ============================================================================================================
+===============================================================================================================
+=============================================================================================================== */
+/* الحركة الأساسية */
+.food, .recepies-box {
+  transition: transform 0.3s ease; /* مدة وسلاسة الحركة */
+}
+
+
+/* الحركة عند المرور بالماوس */
+.food:hover, .recepies-box:hover {
+  transform: translateY(-10px); /* يطلع الصندوق فوق 10 بيكسل */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* يضيف ظل جميل */
+}
+
+/* ============================================================================================================
+===============================================================================================================
+=============================================================================================================== */
+
+/* Food ends */
+
+/*================ footer=============*/
+    .footer {
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+  
+.social-icons a {
+  color: white;
+  margin: 0 15px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+   color: #1db954; /* أو أي لون عند التمرير */
+}
+
+
+/* .............................Question................................ */
+ .contact-section .contact-form form{
+
+    width: 60%;
+    border: rgb(255, 255, 255) 3px solid;
+    padding: 20px 20px;
+    margin: 0px auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+ }
+  .contact-section .contact-form form input{
+    width: 90%;
+    padding: 20px 20px;
+    margin: 10px;
+  
+  }
+.contact-section .contact-form form input:hover{
+    box-shadow: #00bfff53  ;
+    background-color: rgba(255, 255,255, 0.5);
+
+}
+  button .sub{
+     width: 90%;
+     padding: 20px 20px;
+     margin: 10px;
+  }
+  
+
+  /* ---------------------------log in----------------------------- */
+
+
+      .login-box:hover {
+      background: rgb(46, 46, 46);
+     
+      box-shadow: 0 0 20px rgba(141, 143, 255, 0.718);
+     
+    }
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+text-shadow:0 0 20px rgba(0, 0, 0, 0.811);;
+    }
+
+    .login-box {
+  background-color: #414141;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(141, 143, 255, 0.285);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #262626;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  background-color: #353535;
+  color: #00bfff;
+}
+/* لتصغير حجم العناوين على الشاشات الصغيرة */
+h2 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .recipies-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recepies-box {
+    width: 90%;
+    margin-bottom: 30px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .login-box {
+    width: 90%;
+    margin: auto;
+  }
+
+  .menu-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .pricee {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #38a9ff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    width: fit-content;
+  }
+
+  .logo img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .main-header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* -------------------SWIMMING --------------------- */
+
+   
+    .container {
+      padding: 40px;
+    }
+
+
+   
+
+    .pricing {
+      background-color: #e1f5fe;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .footer {
+ 
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+   /* ============================================================================ */
+ 
+
+ .carousel-item img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+/* ------------------------------------------------- */
+.Train{
+  text-align: center;
+  padding: 10px;
+  border: 3px  rgba(0, 47, 255, 0.635) solid;
+  margin: 0 auto;
+  width: 93%;
+  box-shadow: 0px 0px 10px rgb(1, 77, 255);
+  padding: 20px;
+  border-radius: 20px;
+}
+.Train img{
+  width: 70%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(152, 191, 253, 0.66);
+}
+.Train img:hover{
+
+  width: 70%;
+  height: auto;
+  border-radius: 20px;
+   box-shadow: 0px 0px 10px rgb(152, 191, 253);
+}
+.Train h1:hover{
+  color: rgba(255, 255,255, 0.5);
+  border-radius: 20px;
+  border-color: #007bff;
+  text-shadow: 0px 0px 10px rgb(35, 119, 255);
+}
+.Train h2{
+  color: rgb(255, 255, 255);
+  text-align: left;
+  border-radius: 20px;
+  text-decoration: underline ;
+  font-size: 22px;
+}
+.Train li{
+   text-align: left;
+}
+
+.bor  {
+  margin: 10px 20px ;
+  border-radius: 20px;
+ width: 28%;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.404);
+  padding: 20px;
+  border-radius: 20px;
+   outline: rgb(255, 255, 255) 2px solid;
+background-color: rgba(255,255,255, 0.1);
+  /* display: flex; */
+ 
+}
+
+/* ========================================================================================== */
+/* يجعل المربعات (boxes) تنزل تحت بعض في الموبايل */
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* الشاشات الصغيرة: موبايل */
+@media (max-width: 768px) {
+
+  .recipies-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recepies-box,
+  .bor {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .Train img {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+h1{
+   font-size: 30px;
+}
+  .texts {
+    font-size: 16px;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .menu-icon {
+    margin-top: 10px;
+  }
+
+  .dropdown {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .food-section .food-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-section .food-container .food {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+/* التنسيق الأساسي */
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+/* 
+.recipies-boxes {
+  margin: 10px;
+  padding: 5px;
+ }  */
+
+ 
+
+.pricee{
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.pricee:hover {
+  background-color: #0056b3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .recipies-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+  .login-box {
+    max-width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-info {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .menu-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .recipies-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipies-boxes .recepies-box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .food-section .food-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-section .food-container .food {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .menu-icon {
+    margin-top: 10px;
+  }
+
+  .dropdown {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+    .menu-container .dropdown {
+  overflow: hidden;
+  }
+}
+/* =================== RESPONSIVENESS: Phones < 480px =================== */
+@media (max-width: 768px) {
+
+  .recipies-boxes ,
+  .food-section .food-container .food {
+    width: 95%;
+  }
+
+  .Train img {
+    width: 100%;
+  }
+
+  .login-box {
+    width: 90%;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .texts {
+    font-size: 14px;
+  }
+
+  #Tytle {
+    font-size: 38px;
+  }
+
+  .logo img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .button,
+  .price {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .Train h2 {
+    font-size: 18px;
+  }
+
+  .Train li {
+    font-size: 14px;
+  }
+
+  .contact-section .contact-form form {
+    width: 90%;
+  }
+
+  .contact-section .contact-form form input {
+    width: 95%;
+  }
+
+  .footer {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .menu-container .dropdown {
+  overflow: hidden;
+  }
+}
+
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/*  l t5ale te3mal scroll w tenzal 3al as3ar bass bado ye3mal login */
+html {
+  scroll-behavior: smooth;
+}
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+.btn {
+  margin: 0px auto;
+  text-align: center;
+  display: flex;
+ justify-items: center;
+ align-items: center;
+ width: 7%;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+.food-section .food-container .food{
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+@media (max-width: 480px) {
+  .main-header {
+    height: 100px;
+    padding: 0 10px;
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  
+  .menu-icon {
+    font-size: 28px;
+    padding: 8px;
+  }
+.menu-container .dropdown {
+  overflow: hidden;
+  }
+}

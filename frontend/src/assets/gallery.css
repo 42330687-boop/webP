@@ -1,0 +1,143 @@
+/* =================== GALLERY COMPONENT STYLES =================== */
+
+.gallery {
+  padding: 40px 20px;
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+}
+
+/* =================== HEADING =================== */
+
+.h1center {
+  text-align: center;
+  font-size: 48px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-shadow: 0px 0px 35px #009acd;
+}
+
+.h1center:hover {
+  color: #0091ff;
+  text-shadow: 0px 0px 35px #0aeff35a;
+  transition-duration: 0.3s;
+}
+
+/* =================== GALLERY GRID =================== */
+
+#gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px !important;
+  margin: 40px auto !important;
+  max-width: 1200px !important;
+  justify-items: center !important;
+}
+
+/* =================== MENU INFO CARDS =================== */
+
+.menu-info {
+  text-align: center;
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100% !important;
+  max-width: 500px !important;
+}
+
+.menu-info:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  outline: rgb(255, 255, 255) 2px solid;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-info a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.menu-info img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.menu-info:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 153, 205, 0.6);
+}
+
+.menu-info h2 {
+  color: #009acd;
+  font-size: 28px;
+  margin: 15px 0 10px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px #009acd;
+}
+
+.menu-info .texts {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Times New Roman', Times, serif;
+  margin: 10px 0;
+}
+
+/* =================== DESCRIPTION PARAGRAPH =================== */
+
+.gallery > p {
+  max-width: 900px;
+  margin: 50px auto 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Times New Roman', Times, serif;
+  padding: 30px;
+  background-color: rgba(0, 153, 205, 0.1);
+  border: 2px solid rgba(0, 153, 205, 0.3);
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 153, 205, 0.2);
+}
+
+.gallery > p b {
+  color: #00bfff;
+  font-size: 20px;
+  text-shadow: 0px 0px 10px #009acd;
+}
+
+/* =================== RESPONSIVE DESIGN =================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  #gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .menu-info {
+    max-width: 400px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #gallery {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+
+  .menu-info {
+    width: 90% !important;
+    max-width: 400px !important;
+  }
+}

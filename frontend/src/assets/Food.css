@@ -1,0 +1,236 @@
+/* =================== FOOD PAGE STYLES =================== */
+
+/* تنسيق العنوان الرئيسي */
+h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 30px 0;
+  text-shadow: 0px 0px 35px #009acd;
+  font-family: 'Arial', sans-serif;
+}
+.food-box{
+ width: 100%;
+  box-shadow: 0px 0px 10px rgba(5, 106, 214, 0.756);
+  padding: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+h1:hover {
+  color: #024b64;
+  text-shadow: 0px 0px 35px #ffffff;
+}
+
+/* =================== FOOD SECTION STYLES =================== */
+
+.food-section {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.food-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00bfff;
+  text-shadow: 0px 0px 20px #ffffff;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+}
+
+.food-section .food-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 أصناف بجانب بعض */
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* =================== FOOD ITEM STYLES =================== */
+
+.food-section .food-container .food {
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  grid-template-columns: repeat(4, 1fr) !important;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.food-section .food-container .food:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 0px 20px #00bfff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #00bfff;
+}
+
+.food-section .food-container .food img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.food-section .food-container .food:hover img {
+  transform: scale(1.05);
+}
+
+.food-section .food-container .food p {
+  margin: 8px 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.food-section .food-container .food .food-name {
+  color: #00bfff;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 0px 8px #00bfff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-section .food-container .food .food-price {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px #ffffff;
+  background-color: rgba(0, 123, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* =================== RESPONSIVE DESIGN =================== */
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+  .food-section .food-container {
+    grid-template-columns: repeat(2, 1fr); /* صورتين بجانب بعض */
+    gap: 25px;
+    max-width: 800px;
+  }
+  
+  .food-section .food-container .food {
+    max-width: 350px;
+  }
+  
+  .food-section .food-container .food img {
+    height: 220px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 38px;
+  }
+  
+  .food-section h2 {
+    font-size: 30px;
+  }
+  
+  .food-section .food-container .food {
+    max-width: 300px;
+  }
+  
+  .food-section .food-container .food img {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+  
+  .food-section {
+    margin: 30px 0;
+    padding: 0 15px;
+  }
+  
+  .food-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .food-section .food-container {
+    grid-template-columns: 1fr; /* صورة واحدة لكل صف */
+    gap: 20px;
+    max-width: 400px;
+  }
+  
+  .food-section .food-container .food {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .food-section .food-container .food img {
+    height: 200px;
+  }
+  
+  .food-section .food-container .food .food-name {
+    font-size: 18px;
+    /* min-height: auto; */
+  }
+  
+  .food-section .food-container .food .food-price {
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  .food-section h2 {
+    font-size: 22px;
+  }
+  
+  .food-section .food-container .food {
+    padding: 12px;
+  }
+  
+  .food-section .food-container .food img {
+    height: 180px;
+  }
+  
+  .food-section .food-container .food .food-name {
+    font-size: 16px;
+  }
+  
+  .food-section .food-container .food .food-price {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+.food-section .food-container .food{
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+/* =================== SCROLL MARGINS FOR ANCHOR LINKS =================== */
+
+#downnn,
+#downn,
+#downnnn {
+  scroll-margin-top: 100px;
+}

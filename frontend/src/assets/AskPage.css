@@ -1,0 +1,119 @@
+/* =================== WRAPPER =================== */
+
+.ask-wrapper {
+  width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+  border: 3px solid rgba(0, 147, 255, 0.6);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #009acd;
+  text-align: center;
+  color: white;
+}
+
+/* =================== TITLE =================== */
+
+.ask-title {
+  font-size: 60px;
+  color: white;
+  text-shadow: 0px 0px 35px #009acd;
+  margin-bottom: 20px;
+}
+
+.ask-title span {
+  color: rgb(56, 152, 255);
+}
+
+/* =================== FORM =================== */
+
+.ask-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+
+.ask-form label {
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.ask-form input,
+.ask-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #009acd;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.ask-form input:focus,
+.ask-form textarea:focus {
+  box-shadow: 0px 0px 15px #009acd;
+}
+
+.ask-form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* =================== BUTTON =================== */
+
+.ask-button {
+  padding: 12px;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #009acd;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ask-button:hover {
+  background-color: #009acd;
+  color: white;
+  box-shadow: 0px 0px 15px #009acd;
+}
+
+/* =================== THANKS BOX =================== */
+
+.thanks-box {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  width: 60%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 15px rgba(0, 147, 255, 0.5);
+}
+
+.thanks-box h2 {
+  color: rgb(56, 152, 255);
+  text-shadow: 0px 0px 25px #009acd;
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+  .ask-title {
+    font-size: 40px;
+  }
+  .ask-form, .thanks-box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ask-title {
+    font-size: 32px;
+  }
+  .ask-form label {
+    font-size: 14px;
+  }
+}
