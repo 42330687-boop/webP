@@ -5,8 +5,9 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false },
 });
 
-pool.connect()
+pool
+  .connect()
   .then(() => console.log("✅ PostgreSQL Connected"))
-  .catch(err => console.error("❌ DB Error:", err));
+  .catch((err) => console.error("❌ DB Error:", err));
 
 module.exports = pool;
