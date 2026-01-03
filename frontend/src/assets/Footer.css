@@ -1,117 +1,80 @@
-/* =================== FOOTER STYLES =================== */
+/* =================== FOOTER =================== */
 
 .footer {
   background-color: #222;
   color: white;
-  padding: 20px;
+  padding: clamp(15px, 3vw, 25px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+  gap: 20px;
 }
 
-.footer p {
+.footer p,
+.footer .presentation {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
+  font-size: clamp(14px, 2.5vw, 18px);
   margin: 0;
   color: white;
+  text-align: center;
 }
 
 /* =================== SOCIAL ICONS =================== */
 
 .social-icons {
   display: flex;
-  gap: 15px;
   align-items: center;
+  gap: clamp(10px, 3vw, 20px);
 }
 
 .social-icons a {
   color: white;
-  margin: 0 15px;
-  font-size: 24px;
+  font-size: clamp(20px, 4vw, 26px);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
   display: flex;
-  align-items: center;
+  align-items: final;
   justify-content: center;
 }
 
 .social-icons a:hover {
-  color: #1db954;
   transform: scale(1.2);
 }
 
-/* تنسيق أيقونات MUI */
+/* MUI Icons */
 .social-icons a svg {
-  font-size: 28px;
-  transition: all 0.3s ease;
+  font-size: inherit;
+  transition: filter 0.3s ease;
 }
 
-.social-icons a:hover svg {
-  filter: drop-shadow(0 0 8px #1db954);
-}
-
-/* ألوان مخصصة لكل أيقونة عند الـ hover */
+/* Hover colors */
 .social-icons a:nth-child(1):hover {
-  color: #25D366; /* لون WhatsApp */
+  color: #25D366;
+  filter: drop-shadow(0 0 8px #25D366);
 }
 
 .social-icons a:nth-child(2):hover {
-  color: #E4405F; /* لون Instagram */
+  color: #E4405F;
+  filter: drop-shadow(0 0 8px #E4405F);
 }
 
 .social-icons a:nth-child(3):hover {
-  color: #EA4335; /* لون Gmail */
+  color: #EA4335;
+  filter: drop-shadow(0 0 8px #EA4335);
 }
 
-/* =================== RESPONSIVE DESIGN =================== */
+/* =================== RESPONSIVE =================== */
 
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
     text-align: center;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .footer p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .social-icons {
-    margin-top: 10px;
-    gap: 10px;
-  }
-
-  .social-icons a {
-    margin: 0 10px;
-    font-size: 22px;
-  }
-
-  .social-icons a svg {
-    font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 10px;
+    padding: 12px;
   }
-
-  .footer p {
-    font-size: 14px;
-  }
-
-  .social-icons a {
-    margin: 0 5px;
-    font-size: 20px;
-  }
-
-  .social-icons a svg {
-    font-size: 22px;
-  }
-}
-.footer .presentation{
-  font-size: 25px;
 }
