@@ -23,11 +23,11 @@ function SignUp() {
     try {
       setLoading(true);
 
-      const res = await axios.post("https://web-p-eight.vercel.app//api/auth/signup", {
-        name,
-        email,
-        password,
-      });
+     const res = await axios.post(
+  "https://webp-y7mb.onrender.com/api/auth/signup",
+  { name, email, password }
+);
+
 
       if (res.data.success) {
         alert("Account created successfully! Please log in.");

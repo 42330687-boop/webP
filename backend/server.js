@@ -24,3 +24,6 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, () =>
   console.log(`🚀 Server running on http://localhost:${PORT}`)
 );
+app.use(express.json());
+app.use("/api/questions", questionsRoutes);
+app.use("/api/auth", authRoutes);

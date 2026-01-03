@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import "../assets/AskPage.css";
 import "../style.css";
 
@@ -10,27 +10,25 @@ function AskPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API_URL = "https://web-p-eight.vercel.app//api/questions";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
     try {
-      const response = await axios.post(API_URL, {
+      const res = await api.post("/api/questions", {
         name,
         question,
       });
 
-      if (response.status === 201 || response.status === 200) {
+      if (res.data.success) {
         setSent(true);
         setName("");
         setQuestion("");
       }
     } catch (err) {
-      console.error("Error submitting question:", err);
-      setError("Failed to submit question. Please try again.");
+      console.error(err);
+      setError("Failed to submit question");
     } finally {
       setLoading(false);
     }
@@ -48,38 +46,25 @@ function AskPage() {
 
           <label>Your Name</label>
           <input
-            type="text"
-            placeholder="Enter your name..."
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            disabled={loading}
           />
 
           <label>Your Question</label>
           <textarea
-            placeholder="Write your question here..."
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             required
-            disabled={loading}
           />
 
-          <button type="submit" className="ask-button" disabled={loading}>
+          <button disabled={loading}>
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
       ) : (
-        <div className="thanks-box">
-          <h2>Thank You!</h2>
-          <p>Your question has been submitted.</p>
-          <button
-            className="ask-button"
-            onClick={() => setSent(false)}
-            style={{ marginTop: "20px" }}
-          >
-            Ask Another Question
-          </button>
+        <div>
+          <h2>Thank you!</h2>
         </div>
       )}
     </div>

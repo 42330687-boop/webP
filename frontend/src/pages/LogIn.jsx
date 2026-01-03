@@ -22,10 +22,10 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await axios.post("https://web-p-eight.vercel.app//api/auth/login", {
-        email,
-        password,
-      });
+     const res = await axios.post(
+  "https://webp-y7mb.onrender.com/api/auth/login",
+  { email, password }
+);
 
       if (res.data.success) {
         // حفظ payment method
