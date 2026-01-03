@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../axios"; // axios instance
+import api from "../axios"; 
 import "../assets/AskPage.css";
 import "../style.css";
 

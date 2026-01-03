@@ -1,8 +1,8 @@
 const express = require("express");
+const router = express.Router();
 const db = require("../db");
 
-const router = express.Router();
-
+// POST /api/questions
 router.post("/", async (req, res) => {
   const { name, question } = req.body;
 
@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
     );
     res.json({ success: true });
   } catch (err) {
-    console.error(err);
+    console.error("DB error:", err);
     res.status(500).json({ message: "DB error" });
   }
 });
