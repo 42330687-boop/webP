@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db");
 
-// ADD QUESTION
 router.post("/", async (req, res) => {
   const { name, question } = req.body;
 
@@ -10,17 +9,14 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ message: "Missing fields" });
   }
 
-  try {
-    await db.query(
-      "INSERT INTO questions (name, question) VALUES ($1, $2)",
-      [name, question]
-    );
-
-    res.json({ success: true });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "DB error" });
-  }
+  db.query(
+    "INSERT INTO questions (name, question) VALUES (?, ?)",
+    [name, question],
+    (err) => {
+      if (err) return res.status(500).json({ message: "DB error" });
+      res.json({ success: true });
+    }
+  );
 });
 
 module.exports = router;

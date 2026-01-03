@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../axios"; 
+import api from "../axios"; // axios instance
 import "../assets/AskPage.css";
 import "../style.css";
 
@@ -16,18 +16,18 @@ function AskPage() {
     setError("");
 
     try {
-      const response = await api.post("/api/questions", {
+      const response = await api.post("/questions", {
         name,
         question,
       });
 
-      if (response.status === 200 || response.status === 201) {
+      if (response.data.success) {
         setSent(true);
         setName("");
         setQuestion("");
       }
     } catch (err) {
-      console.error("Error submitting question:", err);
+      console.error(err);
       setError("Failed to submit question. Please try again.");
     } finally {
       setLoading(false);
@@ -47,23 +47,19 @@ function AskPage() {
           <label>Your Name</label>
           <input
             type="text"
-            placeholder="Enter your name..."
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            disabled={loading}
           />
 
           <label>Your Question</label>
           <textarea
-            placeholder="Write your question here..."
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             required
-            disabled={loading}
           />
 
-          <button type="submit" className="ask-button" disabled={loading}>
+          <button className="ask-button" disabled={loading}>
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
@@ -71,11 +67,7 @@ function AskPage() {
         <div className="thanks-box">
           <h2>Thank You!</h2>
           <p>Your question has been submitted.</p>
-          <button
-            className="ask-button"
-            onClick={() => setSent(false)}
-            style={{ marginTop: "20px" }}
-          >
+          <button className="ask-button" onClick={() => setSent(false)}>
             Ask Another Question
           </button>
         </div>
