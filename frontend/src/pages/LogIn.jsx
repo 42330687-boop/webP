@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../assets/Auth.css";
 import { Link, useNavigate } from "react-router-dom";
 import "../style.css";
-import axios from "axios";
+import api from "../axios";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -22,10 +22,8 @@ function Login() {
     try {
       setLoading(true);
 
-     const res = await axios.post(
-  "https://webp-y7mb.onrender.com/api/auth/login",
-  { email, password }
-);
+   const res = await api.post("/auth/login", { email, password });
+
 
       if (res.data.success) {
         // حفظ payment method

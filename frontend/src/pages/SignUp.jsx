@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../assets/Auth.css";
 import "../style.css";
-import axios from "axios";
+import api from "../axios";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -22,11 +22,8 @@ function SignUp() {
 
     try {
       setLoading(true);
+const res = await api.post("/auth/signup", { name, email, password });
 
-     const res = await axios.post(
-  "https://webp-y7mb.onrender.com/api/auth/signup",
-  { name, email, password }
-);
 
 
       if (res.data.success) {
