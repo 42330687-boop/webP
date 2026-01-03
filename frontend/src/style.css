@@ -1,3 +1,67 @@
+/* ================= MENU ICON ONLY ================= */
+
+/* حاوية أيقونة المينيو */
+.menu-container {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* أيقونة المينيو */
+.menu-icon {
+  font-size: 34px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00bfff;
+  transform: scale(1.15);
+}
+
+.menu-icon:active {
+  transform: scale(0.95);
+}
+
+/* ================= DROPDOWN MENU ================= */
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  list-style: none;
+  background-color: #333;
+  border-radius: 10px;
+  width: 180px;
+  display: none;
+  padding: 8px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background-color: #444;
+  color: #00bfff;
+  padding-left: 25px;
+}
 /* ================= RESET ================= */
 * {
   margin: 0;
@@ -223,5 +287,20 @@ h3 { font-size: 1.6rem; }
   .footer {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .menu-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-icon {
+    font-size: 24px;
+    padding: 8px;
   }
 }
