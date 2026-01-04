@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
   }
 
   db.query(
-    "INSERT INTO questions (name, question) VALUES (?, ?)",
+    "INSERT INTO questions (name, question) VALUES ($1,$2)",
     [name, question],
     (err) => {
       if (err) return res.status(500).json({ message: "DB error" });
